@@ -1,0 +1,19 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.organizeImports": "always"
+  },
+  "workbench.editor.customLabels.patterns": {
+    "**/src/app/**/page.tsx": "${dirname} - Page",
+    "**/src/app/**/index.tsx": "${dirname} - Index",
+    "**/src/app/**/layout.tsx": "${dirname} - Layout",
+    "**/src/app/**/template.tsx": "${dirname} - Template",
+    "**/src/components/**/index.tsx": "${dirname} - Component"
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "cSpell.words": ["supabase"]
+}
