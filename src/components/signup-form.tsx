@@ -42,7 +42,6 @@ export const SignUpForm = () => {
   };
 
   async function onSubmit(values: z.infer<typeof SignUpSchema>) {
-    console.log("This is the values of the form : ", values);
     const supabase = createClient();
     setLoading(true);
     setError(null);

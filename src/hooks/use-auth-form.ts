@@ -2,7 +2,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import z from "zod";
 
-import { SignUpSchema } from "@/schema/form-schema";
+import { LogInSchema, SignUpSchema } from "@/schema/form-schema";
 
 export const useAuthForm = () => {
   const signupform = useForm<z.infer<typeof SignUpSchema>>({
@@ -15,5 +15,13 @@ export const useAuthForm = () => {
     },
   });
 
-  return { signupform };
+  const loginform = useForm<z.infer<typeof LogInSchema>>({
+    resolver: zodResolver(LogInSchema),
+    defaultValues: {
+      email: "",
+      password: "",
+    },
+  });
+
+  return { signupform, loginform };
 };
